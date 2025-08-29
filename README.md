@@ -1,194 +1,194 @@
-# next.js
-test1
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Product Management System - Login</title>
-</head>
-<body>
-    <h2>Login Screen</h2>
-    <form action="dashboard.html">
-        <label>Username:</label>
-        <input type="text" name="username"><br>
-        <label>Password:</label>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Login">
-    </form>
-</body>
-</html>
+1. Employee.java (POJO Class)
 
+public class Employee {
+    private int employeeNumber;
+    private String employeeFirstName;
+    private String employeeLastName;
+    private double salary;
+    private char gender;
 
+    // Default Constructor
+    public Employee() {
+    }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Product Dashboard</title>
-</head>
-<body>
-    <h2>Product Dashboard</h2>
-    <p>Welcome, [User]!</p>
-    <p>Total Products: 120</p>
-    <p>Active Products: 110</p>
-    <p>Out of Stock: 10</p>
-    <a href="productlist.html">Go to Product List</a>
-</body>
-</html>
+    // Parameterized Constructor
+    public Employee(int employeeNumber, String employeeFirstName, String employeeLastName, double salary, char gender) {
+        this.employeeNumber = employeeNumber;
+        this.employeeFirstName = employeeFirstName;
+        this.employeeLastName = employeeLastName;
+        this.salary = salary;
+        this.gender = gender;
+    }
 
+    // Getters & Setters
+    public int getEmployeeNumber() {
+        return employeeNumber;
+    }
 
+    public void setEmployeeNumber(int employeeNumber) {
+        this.employeeNumber = employeeNumber;
+    }
 
+    public String getEmployeeFirstName() {
+        return employeeFirstName;
+    }
 
+    public void setEmployeeFirstName(String employeeFirstName) {
+        this.employeeFirstName = employeeFirstName;
+    }
 
+    public String getEmployeeLastName() {
+        return employeeLastName;
+    }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Product List / Catalog</title>
-</head>
-<body>
-    <h2>Product List / Catalog</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th><th>Name</th><th>Category</th>
-            <th>Price</th><th>Stock</th><th>Actions</th>
-        </tr>
-        <tr>
-            <td>001</td><td>Wireless Mouse</td><td>Accessories</td>
-            <td>$25.00</td><td>45</td>
-            <td>
-                <a href="viewproduct.html">View</a> |
-                <a href="editproduct.html">Edit</a> |
-                <a href="deleteproduct.html">Delete</a>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <a href="addproduct.html">Add New Product</a>
-    <br><br>
-    <a href="dashboard.html">Back to Dashboard</a>
-</body>
-</html>
+    public void setEmployeeLastName(String employeeLastName) {
+        this.employeeLastName = employeeLastName;
+    }
 
+    public double getSalary() {
+        return salary;
+    }
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
+    public char getGender() {
+        return gender;
+    }
 
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
 
+    // Function to return full name
+    public String getFullName() {
+        return employeeFirstName + " " + employeeLastName;
+    }
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add New Product</title>
-</head>
-<body>
-    <h2>Add New Product Screen</h2>
-    <form action="productlist.html">
-        <label>Product Name:</label>
-        <input type="text" name="name"><br>
-        <label>Category:</label>
-        <input type="text" name="category"><br>
-        <label>Price:</label>
-        <input type="text" name="price"><br>
-        <label>Stock Quantity:</label>
-        <input type="number" name="stock"><br>
-        <label>Description:</label>
-        <input type="text" name="desc"><br>
-        <input type="submit" value="Add Product">
-    </form>
-    <br>
-    <a href="productlist.html">Back to List</a>
-</body>
-</html>
+    // Display employee details
+    public void displayDetails() {
+        System.out.println("Employee No: " + employeeNumber);
+        System.out.println("Name: " + getFullName());
+        System.out.println("Salary: " + salary);
+        System.out.println("Gender: " + gender);
+    }
+}
 
 
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Product</title>
-</head>
-<body>
-    <h2>Edit Product Screen</h2>
-    <form action="productlist.html">
-        <label>Product Name:</label>
-        <input type="text" name="name" value="Wireless Mouse"><br>
-        <label>Category:</label>
-        <input type="text" name="category" value="Accessories"><br>
-        <label>Price:</label>
-        <input type="text" name="price" value="$25.00"><br>
-        <label>Stock Quantity:</label>
-        <input type="number" name="stock" value="45"><br>
-        <label>Description:</label>
-        <input type="text" name="desc" value="Ergonomic, wireless mouse with USB receiver."><br>
-        <input type="submit" value="Update Product">
-    </form>
-    <br>
-    <a href="productlist.html">Back to List</a>
-</body>
-</html>
 
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Product Details</title>
-</head>
-<body>
-    <h2>Product Details / View Screen</h2>
-    <p><b>ID:</b> 001</p>
-    <p><b>Name:</b> Wireless Mouse</p>
-    <p><b>Category:</b> Accessories</p>
-    <p><b>Price:</b> $25.00</p>
-    <p><b>Stock Quantity:</b> 45</p>
-    <p><b>Description:</b> Ergonomic, wireless mouse with USB receiver.</p>
-    <a href="editproduct.html">Edit</a><br>
-    <a href="productlist.html">Back to List</a>
-</body>
-</html>
+
+MainApp.java (As
+
+
+public class MainApp {
+    public static void main(String[] args) {
+        // Case 1: Assign values using Setters
+        Employee emp1 = new Employee();
+        emp1.setEmployeeNumber(101);
+        emp1.setEmployeeFirstName("Aman");
+        emp1.setEmployeeLastName("Dhananjay");
+        emp1.setSalary(45000);
+        emp1.setGender('M');
+        emp1.displayDetails();
+
+        System.out.println("-------------------------");
+
+        // Case 2: Assign values using Constructor
+        Employee emp2 = new Employee(102, "Riya", "Sharma", 55000, 'F');
+        emp2.displayDetails();
+
+        System.out.println("-------------------------");
+
+        // Case 3: Accept from Command Line Arguments
+        // Example: java MainApp 103 Rahul Verma 60000 M
+        if (args.length >= 5) {
+            int empNo = Integer.parseInt(args[0]);
+            String fName = args[1];
+            String lName = args[2];
+            double sal = Double.parseDouble(args[3]);
+            char gender = args[4].charAt(0);
+
+            Employee emp3 = new Employee(empNo, fName, lName, sal, gender);
+            emp3.displayDetails();
+        }
+    }
+}
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Search and Filter</title>
-</head>
-<body>
-    <h2>Search and Filter Screen</h2>
-    <form action="productlist.html">
-        <label>Search Products:</label>
-        <input type="text" name="search"><br>
-        <label>Category:</label>
-        <select name="category">
-            <option>All Categories</option>
-            <option>Accessories</option>
-            <option>Electronics</option>
-            <option>Apparel</option>
-        </select><br>
-        <input type="submit" value="Search">
-    </form>
-    <br>
-    <a href="productlist.html">Back to List</a>
-</body>
-</html>
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Delete Product</title>
-</head>
-<body>
-    <h2>Delete / Archive Product Screen</h2>
-    <p>Are you sure you want to delete the product "Wireless Mouse"? This action cannot be undone.</p>
-    <form action="productlist.html">
-        <input type="submit" value="Yes, Delete">
-    </form>
-    <br>
-    <a href="productlist.html">Cancel</a>
-</body>
-</html>
+
+
+
+
+
+
+
+BusinessLogic.java (Sala
+
+
+
+
+
+public class BusinessLogic {
+
+    // Compare two employees
+    public static String validateSalary(Employee e1, Employee e2) {
+        if (e1.getSalary() > e2.getSalary()) {
+            return e1.getEmployeeFirstName();
+        } else if (e1.getSalary() < e2.getSalary()) {
+            return e2.getEmployeeFirstName();
+        } else {
+            return "Both have equal salary";
+        }
+    }
+
+    // Compare multiple employees
+    public static String validateSalary(Employee[] employees) {
+        Employee maxEmp = employees[0];
+        for (Employee e : employees) {
+            if (e.getSalary() > maxEmp.getSalary()) {
+                maxEmp = e;
+            }
+        }
+        return maxEmp.getEmployeeFirstName();
+    }
+}
+
+
+
+
+
+
+TestApp.java
+
+
+
+
+
+public class TestApp {
+    public static void main(String[] args) {
+        Employee e1 = new Employee(201, "Rohan", "Verma", 40000, 'M');
+        Employee e2 = new Employee(202, "Sneha", "Patel", 60000, 'F');
+        Employee e3 = new Employee(203, "Karan", "Singh", 75000, 'M');
+
+        // Exercise 15: Compare two employees
+        System.out.println("Highest Salary (between 2): " + BusinessLogic.validateSalary(e1, e2));
+
+        // Exercise 16: Compare more than 2 employees
+        Employee[] empArr = {e1, e2, e3};
+        System.out.println("Highest Salary (among all): " + BusinessLogic.validateSalary(empArr));
+
+        // Exercise 17: Display Full Name
+        System.out.println("Full Name of e2: " + e2.getFullName());
+    }
+}
